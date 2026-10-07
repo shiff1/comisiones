@@ -2,33 +2,61 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Calculadora de Comisiones</title>
+
     <link rel="stylesheet" href="ventas.css">
+
     <script src="ventas.js"></script>
     <script src="utilitarios.js"></script>
 </head>
+
 <body>
 
     <div class="contenedor">
+
         <h1>Calculadora de Comisiones</h1>
 
-        <label>Salario Base:</label>
-        <input type="text" id="txtSueldoBase">
+        <div class="campo">
+            <label>Salario Base:</label>
+            <input type="text" id="txtSueldoBase">
+        </div>
 
-        <label>Número de ventas:</label>
-        <input type="text" id="txtVentas">
+        <div class="campo">
+            <label>Número de ventas:</label>
+            <input type="text" id="txtVentas">
+        </div>
 
-        <label>Precio del producto:</label>
-        <input type="text" id="txtPrecio">
+        <div class="campo">
+            <label>Precio del producto:</label>
+            <input type="text" id="txtPrecio">
+        </div>
 
-        <button onclick="calcular()" >Calcular Comisión</button>
+        <button onclick="calcular()">Calcular Comisión</button>
 
-        <h2>Resultados</h2>
-        <p>Salario Base: <span id="spSueldoBase"></span></p>
-        <p>Comisión: <span id="spComision"></span></p>
-        <p>Total: <span id="spTotal"></span></p>
+        <section class="resultados">
+
+            <h2>Resultados</h2>
+
+            <div class="resultado">
+                <span>Salario Base</span>
+                <strong id="spSueldoBase"></strong>
+            </div>
+
+            <div class="resultado">
+                <span>Comisión</span>
+                <strong id="spComision"></strong>
+            </div>
+
+            <div class="resultado total">
+                <span>Total</span>
+                <strong id="spTotal"></strong>
+            </div>
+
+        </section>
+
     </div>
 
-    
 </body>
 </html>
