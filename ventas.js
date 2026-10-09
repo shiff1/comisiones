@@ -11,7 +11,22 @@ function calcuarComision(numeroVenta,precioProducto) {
     return comision;
 }
 
+function validarVenta() {
+    let numeroVentaStr = document.getElementById("txtVentas").value;
+
+    if (numeroVentaStr.length > 5) {
+        alert("Maximo 5 caracteres");
+        return false;
+    } else {
+        return true;
+    }
+}
+
 function calcular(){
+
+     if (!validarVenta()) {
+        return;
+    }
 
     //recuperamos propiedades de las cajas de texto
     //let componenteSueldoBase = document.getElementById("txtSueldoBase");
@@ -50,4 +65,30 @@ function calcular(){
     mostrarEnSpan("spComision", comision);
     mostrarEnSpan("spTotal", total);
 
+}
+
+
+function validarInput(idInput, idError) {
+    const input = document.getElementById(idInput);
+    const error = document.getElementById(idError);
+    const valor = input.value.trim();
+
+    error.textContent = "";
+
+    if (valor === "") {
+        error.textContent = "Este campo no puede estar vacío.";
+        return false;
+    }
+
+    if (!/^\d+$/.test(valor)) {
+        error.textContent = "Solo se permiten números enteros.";
+        return false;
+    }
+
+    if (valor.length > 5) {
+        error.textContent = "Máximo permitido: 5 dígitos.";
+        return false;
+    }
+
+    return true;
 }

@@ -20,17 +20,22 @@
 
         <div class="campo">
             <label>Salario Base:</label>
-            <input type="text" id="txtSueldoBase">
+            <input type="text" id="txtSueldoBase" onblur="validarInput('txtSueldoBase', 'errorSueldoBase')">
+            <small id="errorSueldoBase" class="error"></small>
+
         </div>
 
         <div class="campo">
             <label>Número de ventas:</label>
-            <input type="text" id="txtVentas">
+            <input type="text" id="txtVentas" onblur="validarInput('txtVentas', 'errorVentas')">
+            <small id="errorVentas" class="error"></small>
+
         </div>
 
         <div class="campo">
             <label>Precio del producto:</label>
-            <input type="text" id="txtPrecio">
+            <input type="text" id="txtPrecio" onblur="validarInput('txtPrecio', 'errorPrecio')">
+            <small id="errorPrecio" class="error"></small>
         </div>
 
         <button onclick="calcular()">Calcular Comisión</button>

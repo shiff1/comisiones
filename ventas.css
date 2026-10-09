@@ -208,3 +208,13 @@ h2 {
         transition: none !important;
     }
 }
+
+
+.error {
+    color: red;
+    font-style: italic;
+    font-size: 13px;
+    display: block;
+    margin-top: 4px;
+    min-height: 16px;
+}
